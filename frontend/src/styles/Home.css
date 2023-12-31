@@ -1,0 +1,163 @@
+.home {
+    background: url('../assets/adrien-olichon-_GH9LwhlSO4-unsplash.jpg'), lightgray 10% / cover no-repeat;
+    padding-block: 3rem;
+}
+
+.headlines {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.headlines h1, p {
+    text-align: center;
+    color: #fff;
+}
+
+.headlines h1 {
+    margin-top: 3.4375rem;
+}
+
+.headlines p, button {
+    margin-block: 1rem;
+}
+
+.headline_buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    
+}
+
+
+.headline_buttons button{
+    border: 1px solid #56E832;
+}
+
+.headline_buttons button:first-child{
+    margin-right: 1rem;
+}
+
+.about_card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.about_card img{
+    height: 454px;
+    margin-right: 2rem; 
+}
+
+.about_card p {
+    width: 22.375rem;
+    text-align: left;
+    font-size: 17px;
+}
+
+.faqs {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.faqs h1 {
+    font-weight: 300;
+    margin-block: 3rem;
+    color: #fff;
+}
+
+.accordions {
+    margin-block: 3rem;
+    display: flex;
+}
+
+.accordion {
+    width: 47%;
+}
+
+.accordion:first-child {
+    margin-right: 1rem;
+}
+
+.accordion_prompt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #56E832;
+}
+
+.accordion_answer p {
+    text-align: left;
+}
+
+.accordion_hide {
+    display: none;
+}
+
+
+@media  screen and (max-width: 768px){
+
+    .hide_for_mobile {
+     display: none;
+    }
+
+    .headlines h1 {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+ 
+    .headlines p {
+        font-size: 0.6rem;
+    }
+
+    .about_card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_card p {
+        width: 80%;
+        margin-top: 1rem;
+        font-size: 13px;
+
+    }
+
+    .about_card img {
+        width: 75%;
+        margin: 0 auto;
+        height: 309px;
+    }
+
+    .faqs h1 {
+        font-size: 1.2rem;
+    }
+
+    .faqs {
+        padding: 0 1rem;
+    }
+
+    .accordions {
+        display: flex;
+        flex-direction: column;
+        margin-block: 0;
+        align-items: center;
+    }
+
+    .accordion {
+      /* width: 90%; */
+      /* margin: 0 auto; */
+    }
+
+    .accordion_prompt p {
+        font-size: 16px;
+    }
+
+    .accordion_answer p {
+        font-size: 16px;
+    }
+ }

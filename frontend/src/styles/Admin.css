@@ -1,0 +1,71 @@
+.admin {
+    padding: 0 5.625rem;
+    max-width: 1178px;
+}
+
+.admin p {
+    color: #000;
+}
+
+.create_buttons {
+    margin-top: 4.4375rem;
+    margin-bottom: 2rem;
+}
+
+.create_buttons button:first-child {
+    margin-right: 1rem;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 1rem;    
+}
+
+.tabs p{
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.tabs p:hover {
+    color: #56E832;
+}
+
+.tabs p:first-child {
+    margin-right: 1rem;
+}
+
+.active {
+    border-bottom: 5px solid black;
+}
+
+.submitted_forms th, td {
+    padding: 0.5rem 3rem;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .admin {
+        padding: 0 0.75rem;
+    }
+
+    .create_buttons {
+        margin-top: 1rem;
+        display: flex;
+    }
+
+    .create_buttons button {
+        font-size: 0.6rem;
+        padding: 0.625rem 1.35rem;
+    }
+
+    .tabs p {
+        font-size: 0.7rem; 
+    }
+
+    .submitted_forms th, td {
+        font-size: 0.7rem;
+        padding: 0.2rem 1rem;
+    }
+
+}

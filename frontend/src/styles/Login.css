@@ -1,0 +1,39 @@
+.login {
+    margin-bottom: 15rem;
+}
+
+.login_header {
+    text-align: center;
+    margin-block: 2rem;
+}
+
+.login_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, label {
+    display: block;
+}
+
+.email_label {
+    width: 9%;
+}
+
+.password_label {
+    width: 15%;
+}
+
+@media  screen and (max-width: 768px){
+    .login-wrapper {
+        padding-inline: 1rem;
+    }
+
+    .login_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

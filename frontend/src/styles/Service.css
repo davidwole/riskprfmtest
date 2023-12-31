@@ -1,0 +1,10 @@
+.price_label {
+    width: 8%;
+}
+
+@media screen and (max-width: 768px) {
+    label {
+        background: none;
+        transform: translate(0px, 0px);
+    }
+}

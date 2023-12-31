@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.hide_for_mobile {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: 1px solid #668C54;
+  background: #000;
+  box-shadow: 2px 4px 4px 0px #56E832;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 17px;
+  padding: 0.625rem 1.6875rem;
+  transition: all 300ms ease-in-out;
+}
+
+button:hover {
+  background:#333333;
+  box-shadow: none;
+}
+
+button:hover {
+
+}
+
+a {
+  text-decoration: none;
+    color: #fff;
+}
+
+input, label, select, textarea {
+  display: block;
+  padding: 1.25rem 1.875rem;
+  width: 32.625rem;
+}
+
+textarea {
+  resize: none;
+  height: 12rem;
+}
+
+label {
+  font-size: 1rem;
+  /* background: white;
+  transform: translate(25px, 23px);
+  padding: 5px; */
+}
+
+.submit_button {
+  padding: 1.25rem 1.875rem;
+  width: 32.625rem;
+  margin-block: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 300ms ease-in-out;
+}
+
+.submit_button:hover {
+  background:#333333;
+  box-shadow: none;
+}
+
+.error_indicator {
+  background: rgb(204, 20, 20);
+  color: #fff;
+  padding: 1rem;
+}
+
+.success_indicator {
+  background: rgb(1, 83, 1);
+  color: #fff;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px){
+  .hide_for_mobile {
+      display: none;
+  }
+
+  input, label, select, textarea {
+    display: block;
+    padding: 0.4125rem 0.61875rem;
+    width: 13.766rem;
+  }
+
+  .submit_button {
+    padding: 0.4125rem 0.61875rem;
+    width: 13.766rem;
+    margin-block: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .error_indicator {
+    background: rgb(204, 20, 20);
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    width: 13.766rem;
+  }
+
+  .success_indicator {
+    width: 13.766rem;
+  }
+
+  .login_mobile_form input:first-child{
+    margin-bottom: 0.5rem;
+  }
+}

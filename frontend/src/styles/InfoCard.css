@@ -1,0 +1,19 @@
+.info_card {
+    height: 1.875rem;
+    background: #191919;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-inline: 4.6875rem;
+}
+
+.info_card ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.info_card li {
+    font-size: 14px;
+    margin-right: 1.1875rem;
+}

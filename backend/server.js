@@ -28,3 +28,5 @@ app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/appointments', require('./routes/appointmentRoutes'));
 app.use('/api/services', require('./routes/serviceRoutes'));
 app.use('/api/messages', require('./routes/messageRoutes'));
+app.use('/api/cars', require('./routes/carRoutes'));
+

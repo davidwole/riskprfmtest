@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/Appointment.css';
 
 export default function Appointment() {
@@ -11,7 +11,36 @@ export default function Appointment() {
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
 
+    const [data, setData] = useState([]);
+    const [selectedMake, setSelectedMake] = useState('');
+    const [selectedModel, setSelectedModel] = useState('');
+    const [selectedServices, setSelectedServices] = useState([]);
+
     const user = JSON.parse(localStorage.getItem('user'));
+
+    useEffect(() => {
+        // Fetch data from your Express API endpoint
+        fetch('api/cars')
+          .then((response) => response.json())
+          .then((data) => setData(data))
+          .catch((error) => console.error('Error fetching data:', error));
+      }, []);
+    
+      const handleMakeChange = (event) => {
+        const make = event.target.value;
+        setSelectedMake(make);
+        setSelectedModel('');
+        setSelectedServices([]);
+      };
+    
+      const handleModelChange = (event) => {
+        const model = event.target.value;
+        setSelectedModel(model);
+        const car = data.find((c) => c.make === selectedMake);
+        const selectedModelData = car.models.find((m) => m.model === model);
+        setSelectedServices(selectedModelData ? selectedModelData.services : []);
+      };
+    
     
     if(user) {
         window.location.assign('/admin');
@@ -25,11 +54,13 @@ export default function Appointment() {
             name,
             email,
             phone,
-            make: 'BMW',
-            model: 'M4',
-            service: 'Oil Change',
+            make: selectedMake,
+            model: selectedModel,
+            service: selectedServices,
             date
         }
+
+        console.log(appointment);
 
         if(name == '' || name[0] == ' ' || email == '' || email[0] == ' ' || phone == '' || phone[0] == ' ' || date == '' || date[0] == ' '){
             setError('Please fill in all fields');
@@ -109,17 +140,36 @@ export default function Appointment() {
                         <label className='mobile_label'>Phone Number</label>
                         <input type='text' value={phone} onChange={(e) => setPhone(e.target.value)}/>
                         <label className='mobile_label'>Make</label>
-                        <select>
-                            <option></option>
+                        <select onChange={handleMakeChange} value={selectedMake}>
+                            <option value="">Select Make</option>
+                            {data.map((car) => (
+                            <option key={car.make} value={car.make}>
+                                {car.make}
+                            </option>
+                            ))}
                         </select>
+                        {selectedMake && (
+                        <>
                         <label className='mobile_label'>Model</label>
-                        <select>
-                            <option></option>
+                        <select onChange={handleModelChange} value={selectedModel}>
+                            <option value="">Select Model</option>
+                            {data
+                            .find((car) => car.make === selectedMake)
+                            .models.map((model) => (
+                                <option key={model.model} value={model.model}>
+                                {model.model}
+                                </option>
+                            ))}
                         </select>
-                        <label className='mobile_label'>Service</label>
-                        <select>
-                            <option></option>
+
+                        <label className='mobile_label'>Services</label>
+                        <select value={selectedServices}>
+                            {selectedServices.map((service, index) => (
+                            <option key={index}>{service.service}</option>
+                            ))}
                         </select>
+                        </>
+                    )}
                         <label className='mobile_label'>date</label>
                         <input type='date' value={date} onChange={(e) => setDate(e.target.value)}/>
                         <button className='submit_button' disabled={loading}>Get Free Quote</button>

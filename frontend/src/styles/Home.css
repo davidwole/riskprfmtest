@@ -110,7 +110,7 @@
         margin-top: 0;
         font-size: 1.9rem;
         text-align: center;
-        width: 3rem;
+        padding-block: 1rem;
     }
  
     .headlines p {

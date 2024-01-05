@@ -29,11 +29,11 @@ export default function Login() {
                         <div className='error_indicator'>
                             <p>{ error }</p>
                         </div>}
-                        <label className='email_label hide_for_mobile'>Email</label>
-                        <input className='hide_for_mobile' type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                        <label className='password_label hide_for_mobile'>Password</label>
-                        <input className='hide_for_mobile' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-                        <button className='submit_button hide_for_mobile' disabled={loading}>Login</button>
+                        <label className='email_label'>Email</label>
+                        <input className='' type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <label className='password_label'>Password</label>
+                        <input className='' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <button className='submit_button' disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
                         {/*  <div className='login_mobile_form'>
                             <input type='text' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                             <input type='password' placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>

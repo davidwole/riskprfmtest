@@ -125,18 +125,18 @@
     .about_card p {
         width: 80%;
         margin-top: 1rem;
-        font-size: 13px;
+        font-size: 1rem;
 
     }
 
     .about_card img {
-        width: 75%;
+        width: 90%;
         margin: 0 auto;
         height: 309px;
     }
 
     .faqs h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
     .faqs {
@@ -156,10 +156,11 @@
     }
 
     .accordion_prompt p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .accordion_answer p {
-        font-size: 16px;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
     }
  }

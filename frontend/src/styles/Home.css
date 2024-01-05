@@ -148,11 +148,11 @@
         flex-direction: column;
         margin-block: 0;
         align-items: center;
+        width: 90%;
     }
 
     .accordion {
-      /* width: 90%; */
-      /* margin: 0 auto; */
+      width: 90%; 
     }
 
     .accordion_prompt p {

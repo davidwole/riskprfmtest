@@ -170,7 +170,7 @@ export default function Appointment() {
                         </select>
                         </>
                     )}
-                        <label className='mobile_label'>date</label>
+                        <label className='mobile_label'>Date</label>
                         <input type='date' value={date} onChange={(e) => setDate(e.target.value)}/>
                         <button className='submit_button' disabled={loading}>Get Free Quote</button>
                     </form>

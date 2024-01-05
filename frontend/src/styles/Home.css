@@ -108,7 +108,9 @@
 
     .headlines h1 {
         margin-top: 0;
-        font-size: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 3rem;
     }
  
     .headlines p {

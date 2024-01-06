@@ -45,8 +45,6 @@ export default function Service() {
 
 
         setLoading(true);
-        console.log(result);
-        return;
 
 
         if(price == '' || price[0] == ' '){
@@ -101,8 +99,8 @@ export default function Service() {
                             </div>
                         }
 
-                        <label className='password_label hide_for_mobile'>Make</label>
-                            <select className='hide_for_mobile' value={selectedMake} onChange={(e) => {
+                        <label className='password_label '>Make</label>
+                            <select className='' value={selectedMake} onChange={(e) => {
                                 setSelectedMake(e.target.value);
                                 setSelectedModel(modelsByMake[e.target.value][0]); // Set first model
                                 setMakeSelected(true);
@@ -116,8 +114,8 @@ export default function Service() {
                             </select>
                         { makeSelected && (
                         <>
-                        <label className='password_label hide_for_mobile'>Model</label>
-                        <select className='hide_for_mobile' value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}>
+                        <label className='password_label '>Model</label>
+                        <select className='' value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}>
                             {Array.from(new Set(modelsByMake[selectedMake])).map((model) => (
                                 <option key={model} value={model}>
                                 {model}
@@ -125,15 +123,15 @@ export default function Service() {
                                 ))}
                         </select>
                     
-                        <label className='password_label hide_for_mobile'>Service</label>
+                        <label className='password_label '>Service</label>
                         <input type='text' value={service} onChange={(e) => setService(e.target.value)} /> 
                         </>
                         )}
 
-                        <label className='price_label hide_for_mobile'>Price</label>
-                        <input className='hide_for_mobile' type='text' value={price} onChange={(e) => setPrice(e.target.value)} />
+                        <label className='price_label '>Price</label>
+                        <input className='' type='text' value={price} onChange={(e) => setPrice(e.target.value)} />
 
-                        <button className='submit_button hide_for_mobile' disabled={loading}>Create Service</button>
+                        <button className='submit_button ' disabled={loading}>Create Service</button>
 
 
                     </form>

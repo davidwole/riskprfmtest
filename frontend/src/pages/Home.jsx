@@ -18,6 +18,22 @@ export default function Home() {
       setActiveIndex(activeIndex === index ? null : index);
     };
 
+    const handleClick = (event) => {
+        const x = event.clientX;
+        const y = event.clientY;
+    
+        console.log(`Clicked at coordinates: x=${x}, y=${y}`);
+      };
+    
+
+    const scrollToAbout = () => {
+        window.scrollTo(0, 508)
+    }
+
+    const scrollToFAQ = () => {
+        window.scrollTo(0, 866)
+    }
+
 
     return(
         <div className='home'>
@@ -30,8 +46,6 @@ export default function Home() {
                 </div>
             </div>
 
-
-            <Element name="section1" className="element">
             <div className='about_card'>
                 <div>
                     <img src={Mechanic} />
@@ -40,16 +54,15 @@ export default function Home() {
                 <p>
                 Welcome to Risk PRFM, where automotive excellence meets unmatched customer service. At Risk PRFM, we take pride in being your trusted partner on the road. With a passion for precision and a commitment to quality, our skilled technicians bring decades of experience to every vehicle that rolls into our shop.
 
-<span className='hide_for_mobile'>At the heart of our service philosophy is a dedication to transparency and integrity. We believe in open communication, ensuring you understand every step of the repair or maintenance process. From routine oil changes to complex engine diagnostics, we handle it all with precision and care.
+            <span className='hide_for_mobile'>At the heart of our service philosophy is a dedication to transparency and integrity. We believe in open communication, ensuring you understand every step of the repair or maintenance process. From routine oil changes to complex engine diagnostics, we handle it all with precision and care.
 
-Equipped with state-of-the-art technology, our facility is designed to meet the evolving needs of modern vehicles. We source top-quality parts and employ the latest industry practices to deliver reliable and efficient solutions.
+            Equipped with state-of-the-art technology, our facility is designed to meet the evolving needs of modern vehicles. We source top-quality parts and employ the latest industry practices to deliver reliable and efficient solutions.
 
-Choose Risk PRFM for a seamless automotive experience that goes beyond the ordinary. Your satisfaction and the health of your vehicle are our top priorities. Drive with confidence – drive with Risk PRFM.</span>
-                </p>
+            Choose Risk PRFM for a seamless automotive experience that goes beyond the ordinary. Your satisfaction and the health of your vehicle are our top priorities. Drive with confidence – drive with Risk PRFM.</span>
+                            </p>
             </div>
-            </Element>
 
-            <div className='faqs' id="section2">
+            <div className='faqs'>
                 <h1>Frequently Asked Questions</h1>
                 <div className='accordions'>
                     <div className='accordion'>

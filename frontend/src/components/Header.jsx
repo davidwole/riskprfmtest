@@ -14,6 +14,14 @@ export default function Header() {
         window.location.assign('/')
     }
 
+    const scrollToAbout = () => {
+        window.scrollTo(0, 692)
+    }
+
+    const scrollToFAQ = () => {
+        window.scrollTo(0, 1200)
+    }
+
 
     return(
         <header>
@@ -22,8 +30,8 @@ export default function Header() {
             <button onClick={logout}>Logout</button> :
             <ul className='links hide_for_mobile'>
                 <li><Link to='/'>Home</Link></li>
-                <li><Link to='#section1'>About</Link></li>
-                <li><Link to='/#section2'>FAQs</Link></li>
+                <li onClick={scrollToAbout}><Link to='/'>About</Link></li>
+            <li onClick={scrollToFAQ}><Link to='/'>FAQs</Link></li>
                 <li><Link to='/contact'>Contact</Link></li>
             </ul>}
         </header>

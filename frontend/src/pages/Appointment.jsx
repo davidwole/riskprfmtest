@@ -112,26 +112,6 @@ export default function Appointment() {
                                 <p>Appointment created Successfully.</p>
                             </div>
                         }
-                        <label className='hide_for_desktop email_label'>Name</label>
-                        <input className='hide_for_desktop email_label' type='text' value={name} onChange={(e) => setName(e.target.value)}/>
-                        <label className='hide_for_desktop email_label'>Email</label>
-                        <input className='hide_for_desktop email_label' type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                        <label className='hide_for_desktop email_label'>Phone Number</label>
-                        <input className='hide_for_desktop email_label' type='text' value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                        <label className='hide_for_desktop email_label'>Make</label>
-                        <select className='hide_for_desktop email_label'>
-                            <option></option>
-                        </select>
-                        <label className='hide_for_desktop email_label'>Model</label>
-                        <select className='hide_for_desktop email_label'>
-                            <option></option>
-                        </select>
-                        <label className='hide_for_desktop email_label'>Service</label>
-                        <select className='hide_for_desktop e smail_label'>
-                            <option></option>
-                        </select>
-                        <label className='hide_for_desktop email_label'>date</label>
-                        <input  className='hide_for_desktop email_label' type='date' value={date} onChange={(e) => setDate(e.target.value)}/>
 
                         <label className='mobile_label'>Name</label>
                         <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>

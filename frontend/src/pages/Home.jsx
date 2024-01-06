@@ -17,22 +17,8 @@ export default function Home() {
     const handleAccordionClick = (index) => {
       setActiveIndex(activeIndex === index ? null : index);
     };
-
-    const handleClick = (event) => {
-        const x = event.clientX;
-        const y = event.clientY;
-    
-        console.log(`Clicked at coordinates: x=${x}, y=${y}`);
-      };
     
 
-    const scrollToAbout = () => {
-        window.scrollTo(0, 508)
-    }
-
-    const scrollToFAQ = () => {
-        window.scrollTo(0, 866)
-    }
 
 
     return(

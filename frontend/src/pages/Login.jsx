@@ -34,11 +34,6 @@ export default function Login() {
                         <label className='password_label'>Password</label>
                         <input className='' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <button className='submit_button' disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
-                        {/*  <div className='login_mobile_form'>
-                            <input type='text' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                            <input type='password' placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                            <button className='submit_button' disabled={loading} onClick={handleSubmit}>{ loading ? "Loading..." : "Login"}</button>
-                        </div> */}
                     </form>
                 </div>
             </div>

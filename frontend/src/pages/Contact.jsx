@@ -68,17 +68,7 @@ export default function Contact() {
                                 <p>Appointment created Successfully.</p>
                             </div>
                         }
-                        <label className='email_label hide_for_mobile'>Name</label>
-                        <input className='email_label hide_for_mobile' type='text' value={name} onChange={(e) => setName(e.target.value)}/>
-                        
-                        <label className='email_label hide_for_mobile'>Email</label>
-                        <input className='email_label hide_for_mobile'type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                        
-                        <label className='email_label hide_for_mobile'>Message</label>
-                        <textarea className='email_label hide_for_mobile'value={message} onChange={(e) => setMessage(e.target.value)}> 
-
-                        </textarea>
-
+                    
                         <label className='mobile_label'>Name</label>
                         <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
                         

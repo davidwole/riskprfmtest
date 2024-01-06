@@ -13,7 +13,6 @@ import Service from '../pages/Service';
 import Contact from '../pages/Contact';
 import CreateAccount from '../pages/CreateAccount';
 import Admin from '../pages/Admin';
-import Appoint from '../pages/Appoint';
 
 
 export default function Body(){
@@ -29,7 +28,6 @@ export default function Body(){
             <Route path='/contact' element={<Contact />} />
             <Route path='/create' element={<CreateAccount />} />
             <Route path='/admin' element={<Admin />} />
-            <Route path='/appoint' element={<Appoint />} />
             </Routes>
        </div>
     )

@@ -110,6 +110,10 @@ label {
   padding: 1rem;
 }
 
+.hide_for_mobile {
+  display: block;
+}
+
 @media screen and (max-width: 768px){
   .hide_for_mobile {
       display: none;

@@ -151,7 +151,7 @@ export default function Appointment() {
                         <>
                             <label className='mobile_label'>Services</label>
                             <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
-                                <option value="">Select Model</option>
+                                <option value="">Select Service</option>
                                 {selectedServices.map((service, index) => (
                                 <option key={index}>{service.service}</option>
                                 ))}

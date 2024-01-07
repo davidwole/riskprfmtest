@@ -73,9 +73,6 @@ export default function CreateAccount() {
                         <input className='hide_for_mobile' type='text' value={email} onChange={(e) => setEmail(e.target.value)} />
                         <button className='submit_button hide_for_mobile' disabled={loading}>Invite</button>
 
-                        {/* <label>Email</label> */}
-                        <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <button className='submit_button' disabled={loading}>Invite</button>
                     </form>
                 </div>
         </div>

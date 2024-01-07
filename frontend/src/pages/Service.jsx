@@ -35,6 +35,7 @@ export default function Service() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
 
         const result = {
             make: selectedMake,
@@ -42,9 +43,7 @@ export default function Service() {
             service,
             price
         }
-
-
-        setLoading(true);
+        
 
 
         if(price == '' || price[0] == ' '){
@@ -67,9 +66,13 @@ export default function Service() {
         });
 
         const json = response.json();
+        console.log(json);
 
         if(response.ok){
             setPrice('');
+            setSelectedMake('');
+            setSelectedModel('');
+            setService('');
             setSuccess(true);
 
             setTimeout(() => {

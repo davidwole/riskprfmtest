@@ -14,6 +14,7 @@ export default function Appointment() {
     const [data, setData] = useState([]);
     const [selectedMake, setSelectedMake] = useState('');
     const [selectedModel, setSelectedModel] = useState('');
+    const [selectedService, setSelectedService] = useState('');
     const [selectedServices, setSelectedServices] = useState([]);
 
     const user = JSON.parse(localStorage.getItem('user'));
@@ -56,11 +57,10 @@ export default function Appointment() {
             phone,
             make: selectedMake,
             model: selectedModel,
-            service: selectedServices,
+            service: selectedService,
             date
         }
 
-        console.log(appointment);
 
         if(name == '' || name[0] == ' ' || email == '' || email[0] == ' ' || phone == '' || phone[0] == ' ' || date == '' || date[0] == ' '){
             setError('Please fill in all fields');
@@ -89,6 +89,9 @@ export default function Appointment() {
             setEmail('');
             setPhone('');
             setDate('');
+            setSelectedMake('');
+            setSelectedModel('');
+            setSelectedService('');
 
             setTimeout(() => {
                 setSuccess(false);
@@ -142,12 +145,17 @@ export default function Appointment() {
                             ))}
                         </select>
 
-                        <label className='mobile_label'>Services</label>
-                        <select value={selectedServices}>
-                            {selectedServices.map((service, index) => (
-                            <option key={index}>{service.service}</option>
-                            ))}
-                        </select>
+                        </>
+                    )}
+                    {selectedModel && (
+                        <>
+                            <label className='mobile_label'>Services</label>
+                            <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
+                                <option value="">Select Model</option>
+                                {selectedServices.map((service, index) => (
+                                <option key={index}>{service.service}</option>
+                                ))}
+                            </select>
                         </>
                     )}
                         <label className='mobile_label'>Date</label>

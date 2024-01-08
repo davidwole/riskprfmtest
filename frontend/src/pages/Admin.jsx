@@ -19,13 +19,13 @@ export default function Admin() {
     }
 
     const getAppointments = async(e) => {
-        const response = await fetch('/api/appointments');
+        const response = await fetch('https://riskprfm.onrender.com/api/appointments');
         const json = await response.json();
         setAppointments(json);
     }
 
     const getAccounts = async(e) => {
-        const response = await fetch('/api/users');
+        const response = await fetch('https://riskprfm.onrender.com/api/users');
         const json = await response.json();
         setAccounts(json);
     }

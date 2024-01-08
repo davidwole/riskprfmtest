@@ -19,15 +19,18 @@ const generateUniqueToken = () => {
   
 const  sendInvitationEmail = (email, invitationLink) => {
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.mail.yahoo.com',
+        port: 465,
+        service:'yahoo',
+        secure: true,
         auth: {
-          user: 'davidoluwole23@gmail.com', // replace with your email
-          pass: 'Fx4jwL1J', // replace with your password
+          user: 'davidoluwole67@yahoo.com', // replace with your email
+          pass: 'rpxkqlxewfmvnlqu', // replace with your password
         },
       });
     
       const mailOptions = {
-        from: 'davidoluwole23@gmail.com',
+        from: 'davidoluwole67@yahoo.com',
         to: email,
         subject: 'Invitation to Join My App',
         text: `Click the following link to create your account: ${invitationLink}`,
@@ -82,7 +85,7 @@ const inviteUser = async (req, res) => {
     const invitationLink = `https://localhost:3001/register/${token}`;
     sendInvitationEmail(email, invitationLink);
   
-    res.json({ message: 'Invitation sent successfully.' });
+    res.json({ message: 'Invitation sent successfully.', link: invitationLink });
 }
 
 const reqigsterwithToken = async (req, res) => {

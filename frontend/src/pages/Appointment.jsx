@@ -73,7 +73,7 @@ export default function Appointment() {
         }
 
 
-        const response = await fetch('/api/appointments', {
+        const response = await fetch('/api/appointments/', {
             method: 'POST',
             body: JSON.stringify(appointment),
             headers: {
@@ -84,6 +84,7 @@ export default function Appointment() {
         const json = await response.json();
 
         if(response.ok){
+            window.scrollTo(0, 10);
             setSuccess(true);
             setName('');
             setEmail('');
@@ -151,7 +152,7 @@ export default function Appointment() {
                         <>
                             <label className='mobile_label'>Services</label>
                             <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
-                                <option value="">Select Service</option>
+                            <option value="">Select Service</option>
                                 {selectedServices.map((service, index) => (
                                 <option key={index}>{service.service}</option>
                                 ))}

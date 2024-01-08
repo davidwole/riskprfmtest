@@ -21,7 +21,7 @@ export default function Appointment() {
 
     useEffect(() => {
         // Fetch data from your Express API endpoint
-        fetch('api/cars')
+        fetch('https://riskprfm.onrender.comapi/cars')
           .then((response) => response.json())
           .then((data) => setData(data))
           .catch((error) => console.error('Error fetching data:', error));
@@ -73,7 +73,7 @@ export default function Appointment() {
         }
 
 
-        const response = await fetch('/api/appointments/', {
+        const response = await fetch('https://riskprfm.onrender.com/api/appointments/', {
             method: 'POST',
             body: JSON.stringify(appointment),
             headers: {

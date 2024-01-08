@@ -114,6 +114,10 @@ label {
   padding: 1rem;
 }
 
+.width {
+  width: 40%;
+}
+
 .hide_for_mobile {
   display: block;
 }

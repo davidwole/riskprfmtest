@@ -13,10 +13,12 @@ import Service from '../pages/Service';
 import Contact from '../pages/Contact';
 import CreateAccount from '../pages/CreateAccount';
 import Admin from '../pages/Admin';
+import Register from '../pages/Register';
 
 
 export default function Body(){
 
+  const user = JSON.parse(localStorage.getItem('user'));
 
     return(
        <div className='body'>
@@ -28,6 +30,8 @@ export default function Body(){
             <Route path='/contact' element={<Contact />} />
             <Route path='/create' element={<CreateAccount />} />
             <Route path='/admin' element={<Admin />} />
+            <Route path='/register/:token' element={<Register />} />
+            <Route path='/*' element={user ? <Admin /> : <Home />} />
             </Routes>
        </div>
     )

@@ -25,7 +25,7 @@ const  sendInvitationEmail = (email, invitationLink) => {
         secure: true,
         auth: {
           user: 'davidoluwole67@yahoo.com', // replace with your email
-          pass: 'rpxkqlxewfmvnlqu', // replace with your password
+          pass: 'ssjjzhhzrtnjlqcn', // replace with your password
         },
       });
     
@@ -82,7 +82,7 @@ const inviteUser = async (req, res) => {
     await invite.save();
   
     // Send an email to the new user with the invitation link
-    const invitationLink = `https://localhost:3001/register/${token}`;
+    const invitationLink = `http://localhost:3000/register/${token}`;
     sendInvitationEmail(email, invitationLink);
   
     res.json({ message: 'Invitation sent successfully.', link: invitationLink });
@@ -99,11 +99,10 @@ const reqigsterwithToken = async (req, res) => {
     }
   
     // Create a new user with the provided details
-    const newUser = new User({ name, email, password });
-    await newUser.save();
+    const newUser = await User.signup(name, email, password);
   
     // Remove the used invitation from the database
-    await invite.remove();
+    await Invite.findByIdAndDelete(invite._id);
   
     res.json({ message: 'User registered successfully.' });
 }
@@ -172,6 +171,11 @@ const editUser = async(req, res) => {
     }
 }
 
+const findInviteEmail = async (req, res) => {
+    const invite = await Invite.find({ token: req.params.token});
+    res.status(200).json({email: invite[0].email})
+}
+
 // Deletes a user
 const deleteUser = async(req, res) => {
     try {
@@ -190,5 +194,6 @@ module.exports = {
     getAllUsers,
     getSingleUser,
     editUser,
-    deleteUser
+    deleteUser,
+    findInviteEmail
 }

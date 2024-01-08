@@ -1,0 +1,15 @@
+.register_title {
+    text-align: center;
+    margin-block: 2rem;
+}
+
+.register {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register button {
+    margin-bottom: 3rem;
+}

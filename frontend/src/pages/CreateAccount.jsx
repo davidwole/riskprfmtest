@@ -31,7 +31,7 @@ export default function CreateAccount() {
             email
         }
 
-        const response = await fetch('/api/createaccount', {
+        const response = await fetch('/api/users/invite', {
             method: 'POST',
             body: JSON.stringify(form),
             headers: {
@@ -43,11 +43,16 @@ export default function CreateAccount() {
 
         if(response.ok){
             setEmail('');
+            console.log(json);
             setSuccess(true);
 
             setTimeout(() => {
                 setSuccess(false);
             }, 1800);
+        }
+
+        if(!response.ok){
+            setError(json.error)
         }
 
         setLoading(false);
@@ -65,7 +70,7 @@ export default function CreateAccount() {
 
                         {success && 
                             <div className='success_indicator'>
-                                <p>Appointment created Successfully.</p>
+                                <p>Invite Sent Successfully.</p>
                             </div>
                         }
                         

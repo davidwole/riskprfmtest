@@ -161,7 +161,7 @@ export default function Appointment() {
                     )}
                         <label className='mobile_label'>Date</label>
                         <input type='date' value={date} onChange={(e) => setDate(e.target.value)}/>
-                        <button className='submit_button' disabled={loading}>Get Free Quote</button>
+                        <button className='submit_button' disabled={loading}>{ loading ? 'Loading...' : 'Get Free Quote'}</button>
                     </form>
                 </div>
         </div>

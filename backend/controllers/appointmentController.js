@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
       user: 'davidoluwole67@yahoo.com', // your Gmail email address
-      pass: 'rpxkqlxewfmvnlqu', // your Gmail password or an app-specific password
+      pass: 'ssjjzhhzrtnjlqcn', // your Gmail password or an app-specific password
     },
 });
 
@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 const sendAppointmentEmail = async (appointmentData) => {
   const mailOptions = {
     from: 'davidoluwole67@yahoo.com', // sender address (must be the same as the authenticated user)
-    to: 'davidwole20@gmail.com', // recipient email address
+    to: 'davidecipher@gmail.com', // recipient email address
     subject: 'Appointment Confirmation',
     html: `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

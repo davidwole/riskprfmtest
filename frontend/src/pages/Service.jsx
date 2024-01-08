@@ -57,7 +57,7 @@ export default function Service() {
         }
 
 
-        const response = await fetch('/api/cars', {
+        const response = await fetch('https://riskprfm.onrender.com/api/cars', {
             method: 'POST',
             body: JSON.stringify(result),
             headers: {

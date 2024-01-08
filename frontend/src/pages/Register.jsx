@@ -19,7 +19,7 @@ export default function Register() {
     }
 
     const getEmail = async () => {
-        const response = await fetch(`/api/users/invite/${token}`);
+        const response = await fetch(`https://riskprfm.onrender.com/api/users/invite/${token}`);
         const json = await response.json();
 
         setEmail(json.email);
@@ -45,7 +45,7 @@ export default function Register() {
             return;
         }
 
-        const response = await fetch(`/api/users/register/${token}`, {
+        const response = await fetch(`https://riskprfm.onrender.com/api/users/register/${token}`, {
             method: 'POST',
             body: JSON.stringify(newAccount),
             headers: {

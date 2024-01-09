@@ -76,7 +76,7 @@ export default function CreateAccount() {
                         
                         <label className='email_label hide_for_mobile'>Email</label>
                         <input className='hide_for_mobile' type='text' value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <button className='submit_button hide_for_mobile' disabled={loading}>Invite</button>
+                        <button className='submit_button hide_for_mobile' disabled={loading}>{ loading ? 'Loading...' : 'Invite' }</button>
 
                     </form>
                 </div>

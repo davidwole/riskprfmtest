@@ -36,7 +36,7 @@
 }
 
 .active {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #56e832;
 }
 
 .submitted_forms th, td {

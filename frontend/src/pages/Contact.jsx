@@ -44,6 +44,7 @@ export default function Contact() {
         });
 
         if(response.ok){
+            window.scrollTo(0, 10);
             setSuccess(true);
 
             setName('');
@@ -65,7 +66,7 @@ export default function Contact() {
                         </div>}
                         {success && 
                             <div className='success_indicator'>
-                                <p>Appointment created Successfully.</p>
+                                <p>Message Sent Successfully.</p>
                             </div>
                         }
                     

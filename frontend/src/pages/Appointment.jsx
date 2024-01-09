@@ -73,7 +73,7 @@ export default function Appointment() {
         }
 
 
-        const response = await fetch('https://riskprfm.onrender.com/api/appointments/', {
+        const response = await fetch('https://riskbackend.onrender.com/api/appointments/', {
             method: 'POST',
             body: JSON.stringify(appointment),
             headers: {

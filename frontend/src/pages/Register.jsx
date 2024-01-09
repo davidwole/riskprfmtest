@@ -9,7 +9,7 @@ export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [loading, setLoading] = useState('');
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
@@ -57,7 +57,7 @@ export default function Register() {
 
         if(response.ok){
             setSuccess(true);
-            setLoading(true);
+            setLoading(false);
             setTimeout(() => {
                 window.location.assign('/login');
             }, 1800)

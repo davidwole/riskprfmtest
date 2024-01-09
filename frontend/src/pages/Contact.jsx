@@ -80,7 +80,7 @@ export default function Contact() {
 
                         </textarea>
                         
-                        <button className='submit_button' disabled={loading}>Get Free Quote</button>
+                        <button className='submit_button' disabled={loading}>{ loading ? 'Loading...' : 'Get Free Quote' }</button>
                     </form>
                 </div>
         </div>

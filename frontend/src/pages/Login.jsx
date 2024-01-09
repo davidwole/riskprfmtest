@@ -10,7 +10,7 @@ export default function Login() {
     const user = JSON.parse(localStorage.getItem('user'));
     
     if(user) {
-        window.location.assign('/admin');
+        window.location.assign('/');
     }
     
 

@@ -35,7 +35,7 @@ export default function Contact() {
             message
         }
 
-        const response = await fetch('https://riskprfm.onrender.com/api/messages', {
+        const response = await fetch('https://riskbackend.onrender.com/api/messages', {
             method: 'POST',
             body: JSON.stringify(form),
             headers: {

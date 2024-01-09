@@ -32,7 +32,7 @@ export default function Admin() {
     }
 
     const getServices = async(e) => {
-        const response = await fetch('https://riskbackend.onrender.com/api/services');
+        const response = await fetch('https://riskbackend.onrender.com/api/cars');
         const json = await response.json();
         console.log(json);
     }

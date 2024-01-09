@@ -1,6 +1,8 @@
 import '../styles/Header.css';
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../hooks/useAuthContext';
+import { useEffect } from 'react'
+
 
 export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -21,6 +23,16 @@ export default function Header() {
     const scrollToFAQ = () => {
         window.scrollTo(0, 1200)
     }
+
+    const getConnection = async () => {
+        const response = await fetch('https://riskbackend.onrender.com/connect');
+        const json = await response.json();
+        console.log(json);
+    }
+
+    useEffect(() => {
+        getConnection();
+    }, [])
 
 
     return(

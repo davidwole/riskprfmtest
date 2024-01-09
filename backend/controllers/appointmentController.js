@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 const sendAppointmentEmail = async (appointmentData) => {
   const mailOptions = {
     from: 'davidoluwole67@yahoo.com', // sender address (must be the same as the authenticated user)
-    to: 'davidecipher@gmail.com', // recipient email address
+    to: 'riskpeformancellc@gmail.com', // recipient email address
     subject: 'Appointment Confirmation',
     html: `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

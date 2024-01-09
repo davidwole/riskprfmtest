@@ -45,7 +45,7 @@ export default function Register() {
             return;
         }
 
-        const response = await fetch(`https://riskbackend.onrender.comm/api/users/register/${token}`, {
+        const response = await fetch(`https://riskbackend.onrender.com/api/users/register/${token}`, {
             method: 'POST',
             body: JSON.stringify(newAccount),
             headers: {

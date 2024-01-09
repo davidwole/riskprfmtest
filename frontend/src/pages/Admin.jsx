@@ -25,7 +25,7 @@ export default function Admin() {
     }
 
     const getAccounts = async(e) => {
-        const response = await fetch('https://riskprfm.onrender.com/api/users');
+        const response = await fetch('https://riskbackend.onrender.com/api/users');
         const json = await response.json();
         setAccounts(json);
     }

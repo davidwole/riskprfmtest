@@ -134,7 +134,7 @@ export default function Service() {
                         <label className='price_label '>Price</label>
                         <input className='' type='text' value={price} onChange={(e) => setPrice(e.target.value)} />
 
-                        <button className='submit_button ' disabled={loading}>Create Service</button>
+                        <button className='submit_button ' disabled={loading}>{loading ? 'Loading...' : 'Create Service' }</button>
 
 
                     </form>

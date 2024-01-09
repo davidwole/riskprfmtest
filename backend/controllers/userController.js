@@ -63,50 +63,59 @@ const getSingleUser = async (req, res) => {
 
 const inviteUser = async (req, res) => {
     const { email } = req.body;
+
+    try {
   
-    // Check if the email is already registered
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({ message: 'User with this email already exists.' });
+        // Check if the email is already registered
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+          return res.status(400).json({ message: 'User with this email already exists.' });
+        }
+      
+        // Generate a unique token for the invitation
+        const token = generateUniqueToken();
+      
+        // Set the expiration date for the invitation (e.g., 24 hours)
+        const expiresAt = new Date();
+        expiresAt.setHours(expiresAt.getHours() + 24);
+      
+        // Save the invitation in the database
+        const invite = new Invite({ email, token, expiresAt });
+        await invite.save();
+      
+        // Send an email to the new user with the invitation link
+        const invitationLink = `https://riskprfm.onrender.com/register/${token}`;
+        sendInvitationEmail(email, invitationLink);
+      
+        res.json({ message: 'Invitation sent successfully.', link: invitationLink });
+    } catch(error){
+        res.status(400).json({error: error});
     }
-  
-    // Generate a unique token for the invitation
-    const token = generateUniqueToken();
-  
-    // Set the expiration date for the invitation (e.g., 24 hours)
-    const expiresAt = new Date();
-    expiresAt.setHours(expiresAt.getHours() + 24);
-  
-    // Save the invitation in the database
-    const invite = new Invite({ email, token, expiresAt });
-    await invite.save();
-  
-    // Send an email to the new user with the invitation link
-    const invitationLink = `https://riskprfm.onrender.com/register/${token}`;
-    sendInvitationEmail(email, invitationLink);
-  
-    res.json({ message: 'Invitation sent successfully.', link: invitationLink });
 }
 
 const reqigsterwithToken = async (req, res) => {
     const { token } = req.params;
     const { name, email, password } = req.body;
 
-    console.log(name, email, password);
+    try{
   
-    // Validate the token and check if it's still valid
-    const invite = await Invite.findOne({ token, expiresAt: { $gt: new Date() } });
-    if (!invite) {
-      return res.status(400).json({ message: 'Invalid or expired invitation token.' });
+        // Validate the token and check if it's still valid
+        const invite = await Invite.findOne({ token, expiresAt: { $gt: new Date() } });
+        if (!invite) {
+          return res.status(400).json({ message: 'Invalid or expired invitation token.' });
+        }
+      
+        // Create a new user with the provided details
+        const newUser = await User.signup(name, email, password);
+      
+        // Remove the used invitation from the database
+        await Invite.findByIdAndDelete(invite._id);
+      
+        res.json({ message: 'User registered successfully.' });
+
+    } catch(error){
+        res.status(400).json({error: error});
     }
-  
-    // Create a new user with the provided details
-    const newUser = await User.signup(name, email, password);
-  
-    // Remove the used invitation from the database
-    await Invite.findByIdAndDelete(invite._id);
-  
-    res.json({ message: 'User registered successfully.' });
 }
   
 

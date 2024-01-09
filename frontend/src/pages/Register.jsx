@@ -19,7 +19,7 @@ export default function Register() {
     }
 
     const getEmail = async () => {
-        const response = await fetch(`https://riskprfm.onrender.com/api/users/invite/${token}`);
+        const response = await fetch(`https://riskbackend.onrender.com/api/users/invite/${token}`);
         const json = await response.json();
 
         setEmail(json.email);

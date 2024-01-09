@@ -25,7 +25,7 @@ const sendMessageEmail = async (messageData) => {
     <ul style="list-style: none; padding: 0;">
       <li style="margin-bottom: 10px;">Name: ${messageData.name}</li>
       <li style="margin-bottom: 10px;">Email: ${messageData.email}</li>
-      <li style="margin-bottom: 10px;">Date: ${messageData.message}</li>
+      <li style="margin-bottom: 10px;">Message: ${messageData.message}</li>
     </ul>
   </div>
     `,

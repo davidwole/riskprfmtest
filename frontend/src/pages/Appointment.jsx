@@ -21,7 +21,7 @@ export default function Appointment() {
 
     useEffect(() => {
         // Fetch data from your Express API endpoint
-        fetch('https://riskprfm.onrender.comapi/cars')
+        fetch('https://riskbackend.onrender.com/api/cars')
           .then((response) => response.json())
           .then((data) => setData(data))
           .catch((error) => console.error('Error fetching data:', error));

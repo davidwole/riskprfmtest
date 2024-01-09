@@ -8,7 +8,7 @@
 }
 
 .create_buttons {
-    margin-top: 4.4375rem;
+    padding-top: 2.438rem;
     margin-bottom: 2rem;
 }
 
@@ -22,6 +22,7 @@
 }
 
 .tabs p{
+    color: white;
     cursor: pointer;
     transition: all 300ms ease-in-out;
 }

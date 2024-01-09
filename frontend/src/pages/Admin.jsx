@@ -34,7 +34,7 @@ export default function Admin() {
     const getServices = async(e) => {
         const response = await fetch('https://riskbackend.onrender.com/api/cars');
         const json = await response.json();
-        setServices(json);
+        console.log(json);
     }
 
     useEffect(() => {
@@ -52,10 +52,9 @@ export default function Admin() {
             <div className="tabs">
                 <p className={activeTab == 0 && 'active'} onClick={() => handleTab(0)}>Appointments</p>
                 <p className={activeTab == 1 && 'active'} onClick={() => handleTab(1)}>Accounts</p>
-                <p className={activeTab == 2 && 'active'} onClick={() => handleTab(2)}>Services</p>
             </div>
 
-            {activeTab == 0 && <table className='submitted_forms table_block'>
+            { activeTab == 0 && <table className='submitted_forms table_block'>
                     <thead>
                         <tr>                        
                             <th>Name</th>
@@ -100,29 +99,6 @@ export default function Admin() {
                     </tbody>
                 </table>    
 }
-
-            { activeTab == 2 && <table className='submitted_forms table_block'>
-                    <thead>
-                        <tr>                        
-                            <th>Name</th>
-                            <th>Service</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        {services && services.map((service) => {
-                            return(
-                                <tr key={service._id}>
-                                    <td>{ service.make }</td>
-                                </tr>
-                            )
-                        })}
-
-                    </tbody>
-                </table>
-            }
-
         </div>
     )
 }

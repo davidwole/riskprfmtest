@@ -55,7 +55,7 @@ export default function Admin() {
                 <p className={activeTab == 2 && 'active'} onClick={() => handleTab(2)}>Services</p>
             </div>
 
-            { activeTab == 0 && <table className='submitted_forms table_block'>
+            {activeTab == 0 && <table className='submitted_forms table_block'>
                     <thead>
                         <tr>                        
                             <th>Name</th>
@@ -65,10 +65,12 @@ export default function Admin() {
                     </thead>
                     <tbody>
                         
-                        {services && services.map((service) => {
+                        {appointments && appointments.map((appointment) => {
                             return(
-                                <tr key={service._id}>
-                                    <td>{ service.make }</td>
+                                <tr key={appointment._id}>
+                                    <td>{ appointment.name }</td>
+                                    <td>{ appointment.service }</td>
+                                    <td>{ appointment.date }</td>
                                 </tr>
                             )
                         })}
@@ -109,12 +111,10 @@ export default function Admin() {
                     </thead>
                     <tbody>
                         
-                        {appointments && appointments.map((appointment) => {
+                        {services && services.map((service) => {
                             return(
-                                <tr key={appointment._id}>
-                                    <td>{ appointment.name }</td>
-                                    <td>{ appointment.service }</td>
-                                    <td>{ appointment.date }</td>
+                                <tr key={service._id}>
+                                    <td>{ service.make }</td>
                                 </tr>
                             )
                         })}

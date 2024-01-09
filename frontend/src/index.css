@@ -34,7 +34,7 @@ input, select, textarea  {
   border: 1px solid #56e832;
 }
 
-input:focus {
+input:focus, textarea:focus {
   border: 2px solid #56e832;
 }
 

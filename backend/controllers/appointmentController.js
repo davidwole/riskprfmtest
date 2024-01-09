@@ -61,6 +61,10 @@ const getSingleAppointment = async(req, res) => {
 const createAppointment = async(req, res) => {
   const appointmentData = req.body;
 
+    if(!appointmentData.name ||  !appointmentData.email || appointmentData.phone) {
+        res.status(500).json({ error: 'Please fill all fields' }); 
+    }
+
     const newAppointment = await Appointment.create(req.body);
     
     // Send the email

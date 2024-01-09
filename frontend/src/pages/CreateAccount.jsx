@@ -31,7 +31,7 @@ export default function CreateAccount() {
             email
         }
 
-        const response = await fetch('https://riskprfm.onrender.com/api/users/invite', {
+        const response = await fetch('https://riskbackend.onrender.com/api/users/invite', {
             method: 'POST',
             body: JSON.stringify(form),
             headers: {

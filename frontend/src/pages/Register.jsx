@@ -57,7 +57,6 @@ export default function Register() {
 
         if(response.ok){
             setSuccess(true);
-            setLoading(false);
             setTimeout(() => {
                 window.location.assign('/login');
             }, 1800)
@@ -65,8 +64,8 @@ export default function Register() {
 
         if(!response.ok){
             setError(json.error)
-            setLoading(false);
         }
+        setLoading(false);
 
     }
 
@@ -93,7 +92,7 @@ export default function Register() {
                 <input type='email' value={email} disabled={true} onChange={(e) => setEmail(e.target.value)}/>
                 <label>Password</label>
                 <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
-                <button className='submit_button' disabled={loading}>{ loading ? 'Loading' : 'Create Account '}</button>
+                <button className='submit_button' disabled={loading}>{ loading ? 'Loading...' : 'Create Account '}</button>
             </form>
         </div>
     )

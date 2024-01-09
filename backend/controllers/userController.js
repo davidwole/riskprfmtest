@@ -91,6 +91,8 @@ const inviteUser = async (req, res) => {
 const reqigsterwithToken = async (req, res) => {
     const { token } = req.params;
     const { name, email, password } = req.body;
+
+    console.log(name, email, password);
   
     // Validate the token and check if it's still valid
     const invite = await Invite.findOne({ token, expiresAt: { $gt: new Date() } });

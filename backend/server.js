@@ -23,6 +23,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(cors());
 
+app.get('/connect', (req, res) => {
+    res.json({
+        connection: true
+    });
+});
+
 // Routes
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/appointments', require('./routes/appointmentRoutes'));

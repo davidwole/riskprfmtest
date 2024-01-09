@@ -28,7 +28,7 @@ export default function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setLoading(true)
         const newAccount = {
             name,
             email,
@@ -57,7 +57,7 @@ export default function Register() {
 
         if(response.ok){
             setSuccess(true);
-
+            setLoading(true);
             setTimeout(() => {
                 window.location.assign('/login');
             }, 1800)

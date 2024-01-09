@@ -65,9 +65,9 @@ export default function Register() {
 
         if(!response.ok){
             setError(json.error)
+            setLoading(false);
         }
 
-        setLoading(false);
     }
 
     useEffect(() => {

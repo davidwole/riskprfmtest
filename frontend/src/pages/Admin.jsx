@@ -6,6 +6,7 @@ export default function Admin() {
 
     const [appointments, setAppointments] = useState([]);
     const [accounts, setAccounts] = useState([]);
+    const [services, setServices] = useState([]);
     const [activeTab, setActiveTab] = useState(0);
 
     const user = JSON.parse(localStorage.getItem('user'));
@@ -28,6 +29,12 @@ export default function Admin() {
         const response = await fetch('https://riskbackend.onrender.com/api/users');
         const json = await response.json();
         setAccounts(json);
+    }
+
+    const getServices = async(e) => {
+        const response = await fetch('https://riskbackend.onrender.com/api/services');
+        const json = await response.json();
+        console.log(json);
     }
 
     useEffect(() => {

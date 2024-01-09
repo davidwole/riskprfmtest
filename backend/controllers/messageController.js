@@ -25,11 +25,7 @@ const sendMessageEmail = async (messageData) => {
     <ul style="list-style: none; padding: 0;">
       <li style="margin-bottom: 10px;">Name: ${messageData.name}</li>
       <li style="margin-bottom: 10px;">Email: ${messageData.email}</li>
-      <li style="margin-bottom: 10px;">Phone: ${messageData.phone}</li>
-      <li style="margin-bottom: 10px;">Make: ${messageData.make}</li>
-      <li style="margin-bottom: 10px;">Model: ${messageData.model}</li>
-      <li style="margin-bottom: 10px;">Service: ${messageData.service}</li>
-      <li style="margin-bottom: 10px;">Date: ${messageData.date}</li>
+      <li style="margin-bottom: 10px;">Date: ${messageData.message}</li>
     </ul>
   </div>
     `,
@@ -57,6 +53,7 @@ const getSingleMessage = async(req, res) => {
 
 const createMessage = async(req, res) => {
     const newMessage = await Message.create(req.body);
+    const messageData = req.body;
 
    try {
         // Send the email

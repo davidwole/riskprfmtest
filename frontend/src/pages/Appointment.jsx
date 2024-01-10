@@ -44,7 +44,7 @@ export default function Appointment() {
     
     
     if(user) {
-        window.location.assign('/admin');
+        window.location.assign('/');
     }
     
 
@@ -97,6 +97,10 @@ export default function Appointment() {
             setTimeout(() => {
                 setSuccess(false);
             }, 1800);
+        }
+
+        if(!response.ok){
+            setError(json.error)q
         }
 
         setLoading(false);

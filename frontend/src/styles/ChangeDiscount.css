@@ -1,0 +1,28 @@
+.submit {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+.login_form h1 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.discount_form {
+    padding: 3rem 0;
+}
+
+.label_discount {
+    padding: 5px;
+}
+
+@media  screen and (max-width: 768px){ 
+
+    .login_form h1 {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+}

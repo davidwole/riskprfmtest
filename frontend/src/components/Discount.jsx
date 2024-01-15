@@ -6,7 +6,7 @@ export default function Discount() {
     const [discountMessage, setDiscountMessage] = useState();
 
     const getDiscount = async () => {
-        const response = await fetch('http://localhost:8080/api/discount');
+        const response = await fetch('https://riskbackend.onrender.com/api/discount');
         const json = await response.json();
 
         setDiscountMessage(json[0].message);

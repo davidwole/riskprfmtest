@@ -6,8 +6,8 @@ export default function Footer() {
             <div className='footer'>
                 <ul>
                     <li>Contact</li>
-                    <li>(000)000-0000</li>
-                    <li>name@email.com</li>
+                    <li>(239)-766-0003</li>
+                    <li>riskperfomancellc@gmail.com</li>
                 </ul>
 
                 <ul>

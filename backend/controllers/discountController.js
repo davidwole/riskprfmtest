@@ -13,10 +13,14 @@ const createDiscount = async (req, res) => {
 }
 
 const editDiscount = async (req, res) => {
+    try{
     const discount = await Discount.findByIdAndUpdate(req.params.id, req.body);
     console.log(req.body.message)
 
     res.status(200).json(discount);
+    } catch(err){
+        res.status(500).json({ error: err });
+    }
 }
 
 module.exports = {

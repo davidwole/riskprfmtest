@@ -3,6 +3,7 @@ import '../styles/Home.css';
 import Mechanic from '../assets/main.png';
 import { useState } from 'react';
 import { Element } from 'react-scroll';
+import Discount from '../components/Discount';
 
 export default function Home() {
     const user = JSON.parse(localStorage.getItem('user'));

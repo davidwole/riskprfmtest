@@ -22,6 +22,5 @@ router.post('/register/:token', reqigsterwithToken);
 router.put('/edit/:id', editUser);
 router.delete('/delete/:id', deleteUser);
 
-//
 
 module.exports = router;

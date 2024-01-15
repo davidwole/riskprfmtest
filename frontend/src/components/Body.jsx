@@ -31,7 +31,7 @@ export default function Body(){
             <Route path='/create' element={user ? <CreateAccount /> : <Navigate to='/' replace/>} />
             <Route path='/changediscount' element={user ? <ChangeDiscount /> : <Navigate to='/' replace/>} />
             <Route path='/register/:token' element={!user ? <Register /> : <Navigate to='/' replace/>} />
-            <<Route path='/*' element={user ? <Admin /> : <Navigate to='/' replace/>} />
+            <Route path='/*' element={user ? <Admin /> : <Navigate to='/' replace/>} />
             </Routes>
        </div>
     )

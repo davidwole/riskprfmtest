@@ -14,6 +14,8 @@ import Contact from '../pages/Contact';
 import CreateAccount from '../pages/CreateAccount';
 import Admin from '../pages/Admin';
 import Register from '../pages/Register';
+import ChangeDiscount from '../pages/ChangeDiscount';
+
 
 
 export default function Body(){

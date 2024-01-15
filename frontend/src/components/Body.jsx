@@ -24,14 +24,14 @@ export default function Body(){
        <div className='body'>
             <Routes>
             <Route path='/' element={user ? <Admin /> : <Home/>} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/appointment' element={<Appointment />} />
-            <Route path='/service' element={<Service />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/create' element={<CreateAccount />} />
-{/*             <Route path='/admin' element={<Admin />} /> */}
-            <Route path='/register/:token' element={<Register />} />
-            <Route path='/*' element={user ? <Admin /> : <Home />} />
+            <Route path='/login' element={user ? <Navigate to='/' replace/> : <Login />} />
+            <Route path='/appointment' element={!user ? <Appointment /> : <Navigate to='/' replace/>} />
+            <Route path='/service' element={user ? <Service /> : <Navigate to='/' replace/>} />
+            <Route path='/contact' element={!user ? <Contact /> : <Navigate to='/' replace/>} />
+            <Route path='/create' element={user ? <CreateAccount /> : <Navigate to='/' replace/>} />
+            <Route path='/changediscount' element={user ? <ChangeDiscount /> : <Navigate to='/' replace/>} />
+            <Route path='/register/:token' element={!user ? <Register /> : <Navigate to='/' replace/>} />
+            <<Route path='/*' element={user ? <Admin /> : <Navigate to='/' replace/>} />
             </Routes>
        </div>
     )

@@ -1,6 +1,6 @@
 .home {
     background: url('../assets/adrien-olichon-_GH9LwhlSO4-unsplash.jpg'), lightgray 10% / cover no-repeat;
-    padding-block: 3rem;
+    padding-block: 0 3rem;
 }
 
 .headlines {

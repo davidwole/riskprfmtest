@@ -15,7 +15,7 @@ export default function ChangeDiscount() {
             message: discountText
         }
 
-        const response = await fetch('http://localhost:8080/api/discount/65a2893590413d029b38cc16', {
+        const response = await fetch('https://riskbackend.onrender.com/api/discount/65a2893590413d029b38cc16', {
             method: 'PUT',
             body: JSON.stringify(form),
             headers: {

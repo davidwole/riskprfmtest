@@ -100,7 +100,7 @@ export default function Appointment() {
         }
 
         if(!response.ok){
-            setError(json.error)q
+            setError(json.error)
         }
 
         setLoading(false);

@@ -6,6 +6,7 @@
 .headlines {
     max-width: 1300px;
     margin: 0 auto;
+    padding-block: 3rem 0;
 }
 
 .headlines h1, p {

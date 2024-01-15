@@ -23,6 +23,8 @@ export default function Home() {
 
     return(
         <div className='home'>
+            <Discount />
+            <div>
             <div className='headlines'>
                 <h1>Precision Repairs, Personalized Care - Where Your Car Feels at Home.</h1>
                 <p>Revitalize Your Ride, Restore Your Confidence.</p>
@@ -99,6 +101,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

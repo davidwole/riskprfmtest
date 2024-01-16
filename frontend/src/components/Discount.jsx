@@ -18,12 +18,12 @@ export default function Discount() {
     }, [])
 
     return(
-       <Link to='/appointment'>
+        { discountMessage && <Link to='/appointment'>
             <div className="discount">
                 <div className="marquee">
                     <p className="discount_text">{ discountMessage }</p>
                 </div>
             </div>
-       </Link>
+       </Link> }
     )
 }

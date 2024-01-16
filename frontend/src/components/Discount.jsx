@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import '../styles/Discount.css'
 
 export default function Discount() {
-    const [discountMessage, setDiscountMessage] = useState();
+    const [discountMessage, setDiscountMessage] = useState(false);
 
     const getDiscount = async () => {
         const response = await fetch('https://riskbackend.onrender.com/api/discount');

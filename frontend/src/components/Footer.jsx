@@ -12,7 +12,7 @@ export default function Footer() {
 
                 <ul>
                     <li>Visit</li>
-                    <li>123 Main Street, New York, NY 10001</li>
+                    <li>4417 NE 14th Place, Cape Coral FL 33909</li>
                 </ul>
 
                 <ul>

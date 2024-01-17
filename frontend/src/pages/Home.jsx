@@ -59,7 +59,7 @@ export default function Home() {
                             <p>+</p>
                         </div>
 
-                        <div className={activeIndex != 0 ? 'accordion_answer accordion_hide' : 'accordion_answer'}>
+                        <div className={activeIndex !== 0 ? 'accordion_answer accordion_hide' : 'accordion_answer'}>
                             <p>It is generally recommended to change your car's oil every 3,000 to 5,000 miles or as specified in your vehicle's owner's manual. Regular oil changes help maintain engine health and extend the life of your vehicle.</p>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ export default function Home() {
                             <p>+</p>
                         </div>
 
-                        <div className={activeIndex != 1 ? 'accordion_answer accordion_hide' : 'accordion_answer'}>
+                        <div className={activeIndex !== 1 ? 'accordion_answer accordion_hide' : 'accordion_answer'}>
                             <p>Look out for warning signs such as squeaking or grinding noises, reduced braking performance, a soft brake pedal, or vibrations while braking. If you experience any of these issues, it's crucial to have your brakes inspected and serviced promptly.</p>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ export default function Home() {
                             <p>+</p>
                         </div>
 
-                        <div className={activeIndex != 2 ? 'accordion_answer accordion_hide' : 'accordion_answer'}>
+                        <div className={activeIndex !== 2 ? 'accordion_answer accordion_hide' : 'accordion_answer'}>
                             <p>Tire rotation is recommended every 6,000 to 8,000 miles or as advised in your vehicle's manual. Regular tire rotation helps ensure even tire wear, extends tire life, and improves overall performance and handling.</p>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ export default function Home() {
                             <p>+</p>
                         </div>
 
-                        <div className={activeIndex != 3 ? 'accordion_answer accordion_hide' : 'accordion_answer'}>
+                        <div className={activeIndex !== 3 ? 'accordion_answer accordion_hide' : 'accordion_answer'}>
                             <p>If your check engine light illuminates, it's essential to have your vehicle inspected as soon as possible. Ignoring the warning could lead to more significant issues. Our technicians can perform a diagnostic scan to identify the problem and provide recommendations for necessary repairs.
 
 </p>

@@ -35,7 +35,7 @@ export default function Register() {
             password
         }
 
-        if(name == '' || name[0] == ' ' || email == '' || email[0] == ' ' || password == '' || password[0] == ' '){
+        if(name === '' || name[0] === ' ' || email === '' || email[0] === ' ' || password === '' || password[0] === ' '){
             setError('Please fill in all fields');
 
             setTimeout(() => {

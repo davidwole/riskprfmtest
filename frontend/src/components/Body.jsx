@@ -1,5 +1,4 @@
 import '../styles/Body.css';
-import { useRef } from 'react';
 import {
     Routes,
     Route,

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '../styles/Service.css';
 import { carData } from '../carData.js';
 
@@ -46,7 +46,7 @@ export default function Service() {
         
 
 
-        if(price == '' || price[0] == ' '){
+        if(price === '' || price[0] === ' '){
             setError('Please fill in all fields');
 
             setTimeout(() => {

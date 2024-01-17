@@ -36,7 +36,7 @@ export default function Home() {
 
             <div className='about_card'>
                 <div>
-                    <img src={Mechanic} />
+                    <img src={Mechanic} alt='Mechanic'/>
                 </div>
 
                 <p>

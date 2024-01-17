@@ -17,8 +17,8 @@ export default function Footer() {
 
                 <ul>
                     <li>Social</li>
-                    <li><a target='_blank' href='https://twitter.com'>Twitter</a></li>
-                    <li><a target='_blank' href='https://instagram.com'>Instagram</a></li>
+                    <li><a target='_blank' rel="noopener noreferrer" href='https://twitter.com'>Twitter</a></li>
+                    <li><a target='_blank' rel="noopener noreferrer" href='https://instagram.com'>Instagram</a></li>
                 </ul>
             </div>
             <p className='copyright'>&#169;RiskPFRM 2024 - All Rights Are Reserved</p>

@@ -6,7 +6,6 @@ export default function Admin() {
 
     const [appointments, setAppointments] = useState([]);
     const [accounts, setAccounts] = useState([]);
-    const [services, setServices] = useState([]);
     const [activeTab, setActiveTab] = useState(0);
 
     const user = JSON.parse(localStorage.getItem('user'));

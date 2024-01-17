@@ -6,7 +6,7 @@ export default function InfoCard() {
             <ul>
                 <li>(239)-766-0003</li>
                 <li>riskperformancellc@gmail.com</li>
-                <li>123 Main Street, New York, NY, 10001.</li>
+                <li>4417 NE 14th Place, Cape Coral FL 33909.</li>
             </ul>
         </div>
     )

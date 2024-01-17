@@ -1,0 +1,5 @@
+[[headers]]
+  # Enable basic cache control for all static assets
+  for = "/*"
+    [headers.values]
+      Cache-Control = "public, max-age=0, must-revalidate"

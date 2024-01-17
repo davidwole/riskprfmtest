@@ -71,7 +71,7 @@ export default function Register() {
 
     useEffect(() => {
         getEmail();
-    }, [email])
+    })
     
     return(
         <div>

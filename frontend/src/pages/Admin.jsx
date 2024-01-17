@@ -31,11 +31,7 @@ export default function Admin() {
         setAccounts(json);
     }
 
-    const getServices = async(e) => {
-        const response = await fetch('https://riskbackend.onrender.com/api/cars');
-        const json = await response.json();
-        console.log(json);
-    }
+    
 
     useEffect(() => {
         getAppointments();
@@ -50,11 +46,11 @@ export default function Admin() {
             </div>
 
             <div className="tabs">
-                <p className={activeTab == 0 && 'active'} onClick={() => handleTab(0)}>Appointments</p>
-                <p className={activeTab == 1 && 'active'} onClick={() => handleTab(1)}>Accounts</p>
+                <p className={activeTab === 0 && 'active'} onClick={() => handleTab(0)}>Appointments</p>
+                <p className={activeTab === 1 && 'active'} onClick={() => handleTab(1)}>Accounts</p>
             </div>
 
-            { activeTab == 0 && <table className='submitted_forms table_block'>
+            { activeTab === 0 && <table className='submitted_forms table_block'>
                     <thead>
                         <tr>                        
                             <th>Name</th>
@@ -78,7 +74,7 @@ export default function Admin() {
                 </table>
             }
 
-            { activeTab == 1 &&      
+            { activeTab === 1 &&      
                     <table className='submitted_forms table_block'>
                     <thead>
                         <tr>                        

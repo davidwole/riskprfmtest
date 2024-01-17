@@ -18,7 +18,7 @@ export default function CreateAccount() {
         e.preventDefault();
         setLoading(true);
 
-        if(email == '' || email[0] == ''){
+        if(email === '' || email[0] === ''){
             setError('Please enter a valid email');
             setTimeout(() => {
                 setError(false);

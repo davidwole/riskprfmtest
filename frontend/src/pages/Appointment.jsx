@@ -62,7 +62,7 @@ export default function Appointment() {
         }
 
 
-        if(name == '' || name[0] == ' ' || email == '' || email[0] == ' ' || phone == '' || phone[0] == ' ' || date == '' || date[0] == ' '){
+        if(name === '' || name[0] === ' ' || email === '' || email[0] === ' ' || phone === '' || phone[0] === ' ' || date === '' || date[0] === ' '){
             setError('Please fill in all fields');
 
             setTimeout(() => {

@@ -20,7 +20,7 @@ export default function Contact() {
         e.preventDefault();
         setLoading(true)
 
-        if(name == '' || name[0] == '' || email == '' || email[0] == '' || message == '' || message[0] == '') {
+        if(name === '' || name[0] === '' || email === '' || email[0] === '' || message === '' || message[0] === '') {
             setError('Please fill in all fields');
 
             setTimeout(() => {

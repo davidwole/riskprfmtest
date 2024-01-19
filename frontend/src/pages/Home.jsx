@@ -30,7 +30,7 @@ export default function Home() {
                 <p>Revitalize Your Ride, Restore Your Confidence.</p>
                 <div className='headline_buttons'>
                     <button><Link to='/appointment'>Book Now</Link></button>
-                    <button><a href='tel:000000000000'>Call Us</a></button>
+                    <button><a href='tel:2397660003'>Call Us</a></button>
                 </div>
             </div>
 

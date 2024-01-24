@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import Mechanic from '../assets/main.png';
-import Oil from '../assets/oil.png';
+import Paint from '../assets/paint.png';
 import { useState } from 'react';
 import Discount from '../components/Discount';
 
@@ -53,7 +53,7 @@ export default function Home() {
 
                            <div className='about_card'>
                 <div>
-                    <img src={Mechanic} alt='Mechanic'/>
+                    <img src={Paint} alt='paint'/>
                 </div>
 
                 <p>

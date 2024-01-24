@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import Mechanic from '../assets/main.png';
+import Oil from '../assets/oil.png';
 import { useState } from 'react';
 import Discount from '../components/Discount';
 

@@ -51,20 +51,15 @@ export default function Home() {
                             </p>
             </div>
 
-                           <div className='about_card'>
+         <div className='about_card'>
                 <div>
                     <img src={Paint} alt='paint'/>
                 </div>
 
                 <p>
-                Welcome to Risk PRFM, where automotive excellence meets unmatched customer service. At Risk PRFM, we take pride in being your trusted partner on the road. With a passion for precision and a commitment to quality, our skilled technicians bring decades of experience to every vehicle that rolls into our shop.
-
-            <span className='hide_for_mobile'>At the heart of our service philosophy is a dedication to transparency and integrity. We believe in open communication, ensuring you understand every step of the repair or maintenance process. From routine oil changes to complex engine diagnostics, we handle it all with precision and care.
-
-            Equipped with state-of-the-art technology, our facility is designed to meet the evolving needs of modern vehicles. We source top-quality parts and employ the latest industry practices to deliver reliable and efficient solutions.
-
-            Choose Risk PRFM for a seamless automotive experience that goes beyond the ordinary. Your satisfaction and the health of your vehicle are our top priorities. Drive with confidence – drive with Risk PRFM.</span>
-                            </p>
+Cracked bumper? Dented fender? Faded paint got you feeling blue? Breathe life back into your beloved vehicle with Risk PRFM! We're your one-stop shop for all things auto body: paint magic that wows and collision repair you can trust.    <span className='hide_for_mobile'> From buffing out minor scratches to resurrecting your car after a fender bender, our skilled technicians are car care whisperers. We meticulously erase dents, flawlessly match paint, and even unleash your inner artist with custom jobs that'll turn heads. Bent frame? No sweat! We straighten it with precision equipment, banish rust like a superhero, and even add years to your car's life with protective armor. But it's not just repairs – we pamper your car with sparkling details, elevate its shine with ceramic coatings, and add a touch of cool with professional window tinting. Risk PRFM is your partner in car rejuvenation, keeping your ride looking and running like a dream. Get a free quote today and witness the transformation! 
+</span>
+</p>
             </div>
 
             <div className='faqs'>

@@ -62,6 +62,15 @@ Cracked bumper? Dented fender? Faded paint got you feeling blue? Breathe life ba
 </p>
             </div>
 
+         <div className='about_card'>
+                <div>
+                    <img src={Paint} alt='paint'/>
+                </div>
+
+                <p>
+                    Unleash your automotive dreams with bespoke fabrication. Craft aerodynamic body kits, unleash hidden horsepower, sculpt luxurious interiors, paint rolling masterpieces. Our skilled craftsmen, armed with cutting-edge tech and premium materials, breathe life into your vision, no project too big or small. Let's redefine your ride.</p>
+            </div>
+
             <div className='faqs'>
                 <h1>Frequently Asked Questions</h1>
                 <div className='accordions'>

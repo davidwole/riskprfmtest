@@ -7,7 +7,7 @@ export default function Footer() {
                 <ul>
                     <li>Contact</li>
                     <li>(239)-766-0003</li>
-                    <li>riskperfomancellc@gmail.com</li>
+                    <li>riskpeformancellc@gmail.com</li>
                 </ul>
 
                 <ul>

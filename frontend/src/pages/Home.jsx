@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import Mechanic from '../assets/main.png';
 import Paint from '../assets/paint.jpg';
+import Pipe from '../assets/pipe.jpeg';
 import { useState } from 'react';
 import Discount from '../components/Discount';
 
@@ -64,7 +65,7 @@ Cracked bumper? Dented fender? Faded paint got you feeling blue? Breathe life ba
 
          <div className='about_card'>
                 <div>
-                    <img src={Paint} alt='paint'/>
+                    <img src={Pipe} alt='paint'/>
                 </div>
 
                 <p>

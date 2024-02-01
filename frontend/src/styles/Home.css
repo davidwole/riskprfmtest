@@ -41,9 +41,9 @@
 .about_card {
     display: flex;
     align-items: center;
-    margin-bottom: 2.5rem;
     max-width: 1300px;
     margin: 0 auto;
+    margin-bottom: 3rem;
 }
 
 .about_card img{

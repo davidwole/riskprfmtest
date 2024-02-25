@@ -84,7 +84,7 @@ const inviteUser = async (req, res) => {
         await invite.save();
       
         // Send an email to the new user with the invitation link
-        const invitationLink = `https://riskprfm.onrender.com/register/${token}`;
+        const invitationLink = `https://riskprfm.com/register/${token}`;
         sendInvitationEmail(email, invitationLink);
       
         res.json({ message: 'Invitation sent successfully.', link: invitationLink });
